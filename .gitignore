@@ -49,3 +49,7 @@ next-env.d.ts
 
 !.env.example
 BUILD_PROMPT.md
+
+.vercel
+.env*
+!.env.example

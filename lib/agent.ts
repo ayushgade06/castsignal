@@ -1,4 +1,4 @@
-// The Castline agent: a manual Claude tool-use loop over Qloo-backed tools. Server-only.
+// The CastSignal agent: a manual Claude tool-use loop over Qloo-backed tools. Server-only.
 import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 import { RunState, type Emit, type Rationale, type WildKind } from "./run";
@@ -8,7 +8,7 @@ import type { RunRequest } from "./brief";
 export const AGENT_MODEL = "claude-sonnet-5-5";
 const MAX_ITERATIONS = 12;
 
-const SYSTEM = `You are Castline, a casting-audience analyst for indie film and TV producers.
+const SYSTEM = `You are CastSignal, a casting-audience analyst for indie film and TV producers.
 You answer, for each role, two questions using Qloo taste data only: (1) fit — does this person's audience already love projects like ours? (2) reach — which audience segments would they add that the comparable titles ("comps") don't already reach?
 
 Work in this order, batching independent tool calls in the same turn:
