@@ -32,6 +32,7 @@ export const RunRequestSchema = z.object({
   brief: BriefSchema,
   constraints: ConstraintsInputSchema.default({ mustInclude: [], exclude: [], maxAListers: null, fitFloor: 0.9 }),
   refine: z.string().trim().max(300).optional(),
+  wildKinds: z.array(z.enum(["comedian", "musician", "actor"])).max(3).optional(),
   previousEnsemble: z.array(z.object({ role: z.string().max(60), name: z.string().max(80).nullable() })).max(3).optional(),
 });
 export type RunRequest = z.infer<typeof RunRequestSchema>;

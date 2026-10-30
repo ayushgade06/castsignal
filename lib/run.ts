@@ -21,6 +21,7 @@ export type RunEvent =
   | { type: "warning"; text: string }
   | { type: "needs_input"; query: string; kind: Kind; question: string; options: Entity[] }
   | { type: "board"; board: Board }
+  | { type: "state"; brief: Brief; constraints: ConstraintsInput }
   | { type: "final"; summary: string | null; rationales: Rationale[]; rationaleStatus: "ok" | "partial" | "unavailable" }
   | { type: "error"; text: string; retryable: boolean }
   | { type: "done" };
@@ -292,6 +293,12 @@ export class RunState {
   async buildBoard(): Promise<Board> {
     await this.ensureResolved();
     for (const r of this.brief.roles) await this.ensureFit(r.role).catch(() => null);
+    // Compare every scored candidate against the comps so cards are complete (cached after the first run).
+    const scoredNames = this.brief.roles.flatMap((r) => r.candidates.filter((q) => {
+      const e = this.candidateEntity(q);
+      return e && this.fit.get(r.role)?.scores.has(e.id);
+    }));
+    await Promise.all(scoredNames.map((q) => this.compareCandidate(q).catch(() => null)));
     const wildIds = [...this.wildcards.values()].flatMap((w) => w.items.map((i) => i.id));
     await this.ensureDemographics(wildIds).catch(() => null);
     if (!this.optimized) await this.optimize(this.constraints).catch(() => null);

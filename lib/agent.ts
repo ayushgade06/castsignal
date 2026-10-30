@@ -28,7 +28,8 @@ Rules:
 - Candidates Qloo has no data for: say so plainly ("decide on track record; Qloo can't speak to this audience"). Never guess a score.
 - Rationales: at most two sentences each. Summary: at most three sentences.
 - On a refine request, change only what the instruction requires; the tools reuse cached Qloo results, so only call what the change needs (usually update_brief and/or optimize_ensemble, then finish).
-- Keep text between tool calls to one short progress sentence or none.`;
+- Keep text between tool calls to one short progress sentence or none. Never narrate your reasoning about these rules.
+- On a refine, finish must still include a rationale for every recommended pick and for anyone whose standing changed, citing the evidence ids from this run's tool results.`;
 
 const segEnum = { type: "string", enum: [...SEGMENTS] } as const;
 const TOOLS: Anthropic.Tool[] = [
@@ -288,7 +289,11 @@ async function execute(name: string, raw: unknown, ctx: Ctx): Promise<{ result: 
       ctx.emit({ type: "board", board: await s.buildBoard() });
       return {
         result: {
-          evidence: "deterministic optimizer over the score_fit and demographics evidence",
+          evidence_ids: {
+            fit: Object.fromEntries([...s.fit.entries()].map(([role, f]) => [role, f.evidence])),
+            demographics: s.demoEvidence,
+            compare: Object.fromEntries([...s.compares.entries()].map(([id, c]) => [[...s.resolved.values()].find((r) => r.chosen?.id === id)?.chosen?.name ?? id, c.evidence])),
+          },
           best: result.best?.picks, alternatives: result.alternatives.map((a) => a.picks), notes: result.notes,
           constraints, combinations_considered: result.considered,
         },
@@ -354,7 +359,7 @@ export async function runAgent(req: RunRequest, emit: Emit, client = new Anthrop
       } as Anthropic.MessageCreateParamsNonStreaming);
       if (res.stop_reason === "refusal") throw new Error("model declined the request");
       messages.push({ role: "assistant", content: res.content });
-      for (const b of res.content) if (b.type === "text" && b.text.trim()) emit({ type: "note", text: b.text.trim().slice(0, 300) });
+      for (const b of res.content) if (b.type === "text" && b.text.trim()) emit({ type: "note", text: b.text.trim().split(/(?<=[.!?])\s/)[0].slice(0, 160) });
       const uses = res.content.filter((b): b is Anthropic.ToolUseBlock => b.type === "tool_use");
       if (!uses.length) {
         if (res.stop_reason === "end_turn") messages.push({ role: "user", content: "Call finish to end the run." });
@@ -389,12 +394,16 @@ export async function runAgent(req: RunRequest, emit: Emit, client = new Anthrop
   }
   // Whatever the LLM did, the board is rebuilt deterministically from the evidence (missing steps run from cache).
   state.setTool(llmFailed || !ctx.finished ? "auto" : "board");
-  if (state.brief.wildcards && !state.wildcards.size) await state.findWildcards("comedian").catch(() => null);
+  if (state.brief.wildcards) {
+    const kinds = state.wildcards.size ? [] : req.wildKinds?.length ? req.wildKinds : ["comedian" as const];
+    for (const k of kinds) await state.findWildcards(k).catch(() => null);
+  }
   const board = await state.buildBoard().catch((e) => {
     emit({ type: "error", text: `Could not build the board: ${(e as Error).message}`, retryable: true });
     return null;
   });
   if (board) emit({ type: "board", board });
+  emit({ type: "state", brief: state.brief, constraints: state.constraints });
   if (!ctx.finished && !llmFailed) state.warn("The agent stopped before writing rationales; scores are complete.");
   emit({
     type: "final",
