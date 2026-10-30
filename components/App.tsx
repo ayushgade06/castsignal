@@ -143,7 +143,7 @@ export function App() {
         </button>
         <div className="flex items-center gap-2">
           {view !== "brief" && (
-            <button className="btn btn-ghost text-sm" onClick={() => setView("brief")}>
+            <button className="btn btn-ghost whitespace-nowrap text-sm" onClick={() => setView("brief")}>
               {view === "run" ? "Edit brief" : "Start your own"}
             </button>
           )}
@@ -162,8 +162,8 @@ export function App() {
       )}
 
       {view === "run" && (
-        <main className="mt-6 grid gap-6 lg:grid-cols-[320px_1fr]">
-          <aside className="no-print lg:sticky lg:top-4 lg:self-start">
+        <main className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
+          <aside className="no-print min-w-0 lg:sticky lg:top-4 lg:self-start">
             <Trace events={events} running={running} />
           </aside>
           <section className="min-w-0">
@@ -314,9 +314,9 @@ function Chooser({ needs, onPick }: { needs: NeedsInput; onPick: (id: string) =>
 
 function BoardSkeleton() {
   return (
-    <div aria-busy="true" aria-label="Loading results" className="grid gap-4">
+    <div aria-busy="true" aria-label="Loading results" className="grid grid-cols-1 gap-4">
       <div className="skeleton h-72" />
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="skeleton h-40" />
         <div className="skeleton h-40" />
       </div>

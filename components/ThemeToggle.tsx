@@ -21,7 +21,7 @@ export function ThemeToggle() {
   }, [mode]);
   const next: Record<Mode, Mode> = { system: "dark", dark: "light", light: "system" };
   return (
-    <button className="btn btn-ghost text-sm" onClick={() => setMode(next[mode])} aria-label={`Theme: ${mode}. Click to change.`}>
+    <button className="btn btn-ghost whitespace-nowrap text-sm" onClick={() => setMode(next[mode])} aria-label={`Theme: ${mode}. Click to change.`}>
       {mode === "dark" ? "☾ Dark" : mode === "light" ? "☀ Light" : "◐ Auto"}
     </button>
   );

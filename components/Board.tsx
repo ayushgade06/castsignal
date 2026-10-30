@@ -148,7 +148,7 @@ export function Board({ board, final, running, onPin }: { board: BoardT; final: 
   const tLabel = board.targets.map((t) => SEGMENT_LABEL[t]).join(", ") || "none";
 
   return (
-    <div className="grid gap-6">
+    <div className="grid grid-cols-1 gap-6">
       {(board.partial || running) && (
         <p className={`chip w-fit ${board.partial ? "border-neg text-neg" : ""}`}>{board.partial ? "PARTIAL — some Qloo calls failed; results use the data that came back" : "Updating as the agent works…"}</p>
       )}
@@ -246,9 +246,9 @@ export function Board({ board, final, running, onPin }: { board: BoardT; final: 
             <h2 id={`role-${r.role}`} className="display text-4xl">{r.role}</h2>
             {r.evidence && <span className="text-xs text-muted">fit from <Evidence ids={[r.evidence]} ledger={board.ledger} /></span>}
           </div>
-          <div className="grid gap-4 lg:grid-cols-[1.1fr_1fr]">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
             <Quadrant cands={r.candidates} onOpen={show} />
-            <ul className="grid content-start gap-2">
+            <ul className="grid min-w-0 grid-cols-1 content-start gap-2">
               {[...r.candidates]
                 .sort((a, b) => (b.fitRank ?? -1) - (a.fitRank ?? -1))
                 .map((c) => (
@@ -281,7 +281,7 @@ export function Board({ board, final, running, onPin }: { board: BoardT; final: 
               {w.note ? (
                 <p className="text-sm text-muted">{w.note} Try different comps or another kind.</p>
               ) : (
-                <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
                   {w.items.map((i) => (
                     <button key={i.id} onClick={() => show(i)} className="panel flex items-center gap-3 p-2.5 text-left hover:border-amber">
                       <Avatar name={i.name} image={i.image} />
@@ -329,7 +329,7 @@ function CandidateCard({ c, board, rationale, onPin, onClose }: { c: BoardCandid
         </div>
         <button onClick={onClose} className="btn btn-ghost px-2 py-1" aria-label="Close">✕</button>
       </div>
-      <div className="grid gap-4 px-5 pb-5">
+      <div className="grid grid-cols-1 gap-4 px-5 pb-5">
         {isCand && c.status === "no_fit_data" && (
           <p className="rounded border border-amber/60 p-3 text-sm">Qloo doesn’t have enough audience data for {c.name} against these comps. Decide on track record — Qloo can’t speak to this audience, and CastSignal won’t invent a score.</p>
         )}

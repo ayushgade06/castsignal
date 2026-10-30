@@ -44,7 +44,7 @@ export function WhyQloo({ board, baseline, onRetry }: { board: BoardT | null; ba
   const overlap = b.wildcards.filter((w) => qWild.some((q) => n(q) === n(w.name)));
 
   return (
-    <div className="grid gap-6">
+    <div className="grid grid-cols-1 gap-6">
       <p className="chip w-fit border-amber text-amber">Illustrative comparison, not a benchmark — both answers generated live for this brief</p>
 
       <section className="panel p-4">
@@ -99,7 +99,7 @@ export function WhyQloo({ board, baseline, onRetry }: { board: BoardT | null; ba
         </div>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-2">
+      <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="panel p-4">
           <h3 className="display text-3xl">Ensemble</h3>
           <p className="text-sm"><span className="field-label">LLM alone </span>{b.ensemble.map((p) => `${p.role}: ${p.name}`).join(" · ")}</p>
