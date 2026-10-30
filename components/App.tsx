@@ -208,7 +208,7 @@ export function App() {
             {board && !running && !refineText && (
               <div className="no-print -mt-3 mb-5 flex flex-wrap gap-2">
                 {["Keep Florence Pugh; we can only afford one A-lister.", "We need to reach women 35–44.", "Swap Barbarian for Scream."].map((s) => (
-                  <button key={s} className="chip hover:border-amber" onClick={() => setRefineText(s)}>{s}</button>
+                  <button key={s} className="chip whitespace-normal text-left hover:border-amber" onClick={() => setRefineText(s)}>{s}</button>
                 ))}
               </div>
             )}
