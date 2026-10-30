@@ -1,7 +1,7 @@
 // The CastSignal agent: a manual Claude tool-use loop over Qloo-backed tools. Server-only.
 import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
-import { RunState, type Emit, type Rationale, type WildKind } from "./run";
+import { RunState, toolCtx, type Emit, type Rationale, type WildKind } from "./run";
 import { hasCitation, unknownCitations, SEGMENTS } from "./scoring";
 import type { RunRequest } from "./brief";
 
@@ -348,6 +348,7 @@ export async function runAgent(req: RunRequest, emit: Emit, client = new Anthrop
   emit({ type: "status", text: req.refine ? "Agent is applying your change…" : "Agent is planning the analysis…" });
   try {
     for (let iter = 0; iter < MAX_ITERATIONS && !ctx.finished && !state.needsInput; iter++) {
+      const t0 = Date.now();
       const res = await client.messages.create({
         model: AGENT_MODEL,
         max_tokens: 4000,
@@ -357,6 +358,7 @@ export async function runAgent(req: RunRequest, emit: Emit, client = new Anthrop
         output_config: { effort: "medium" },
         messages,
       } as Anthropic.MessageCreateParamsNonStreaming);
+      console.log(`[agent] turn ${iter} ${Date.now() - t0}ms stop=${res.stop_reason} out=${res.usage.output_tokens}`);
       if (res.stop_reason === "refusal") throw new Error("model declined the request");
       messages.push({ role: "assistant", content: res.content });
       for (const b of res.content) if (b.type === "text" && b.text.trim()) emit({ type: "note", text: b.text.trim().split(/(?<=[.!?])\s/)[0].slice(0, 160) });
@@ -370,7 +372,7 @@ export async function runAgent(req: RunRequest, emit: Emit, client = new Anthrop
         uses.map(async (u): Promise<Anthropic.ToolResultBlockParam> => {
           emit({ type: "tool", id: u.id, name: u.name, input: JSON.stringify(u.input).slice(0, 200) });
           try {
-            const { result, summary } = await execute(u.name, u.input, ctx);
+            const { result, summary } = await toolCtx.run(u.name, () => execute(u.name, u.input, ctx));
             emit({ type: "tool_result", id: u.id, ok: true, summary });
             return { type: "tool_result", tool_use_id: u.id, content: JSON.stringify(result) };
           } catch (e) {

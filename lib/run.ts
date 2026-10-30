@@ -1,4 +1,5 @@
 // Run state, the agent's tools, and the deterministic Casting Board. Server-only.
+import { AsyncLocalStorage } from "node:async_hooks";
 import * as qloo from "./qloo";
 import type { Entity, Scored, CallMeta } from "./qloo";
 import {
@@ -65,6 +66,9 @@ export type Board = {
   partial: boolean;
 };
 
+// Which tool a Qloo call belongs to, safe under parallel tool execution.
+export const toolCtx = new AsyncLocalStorage<string>();
+
 const norm = (s: string) => s.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]/g, "");
 const TAG_SUBTYPES = new Set(["genre:qloo", "genre:media", "emotional_tone:qloo", "aesthetic_property:qloo"]);
 
@@ -96,7 +100,7 @@ export class RunState {
     try {
       const { data, meta } = await fn();
       const entry: LedgerEntry = {
-        id: `q${this.ledger.length + 1}`, tool: this.tool, endpoint: meta.endpoint, params: summarizeParams(meta.params),
+        id: `q${this.ledger.length + 1}`, tool: toolCtx.getStore() ?? this.tool, endpoint: meta.endpoint, params: summarizeParams(meta.params),
         status: meta.status, ms: meta.ms, count: meta.count, cached: meta.cached,
       };
       this.ledger.push(entry);
