@@ -1,0 +1,472 @@
+{
+ "results": {
+  "a": [
+   {
+    "tag_id": "urn:tag:language:qloo:english",
+    "name": "English",
+    "type": "urn:tag",
+    "subtype": "urn:tag:language:qloo",
+    "entity_id": "C3B3AAC8-E37A-4DDB-8D30-C3AF03D7789B",
+    "popularity": 0.9958745,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:style:qloo:engaging",
+    "name": "Engaging",
+    "type": "urn:tag",
+    "subtype": "urn:tag:style:qloo",
+    "entity_id": "3F4ACC42-080A-4FC3-85F1-BE70AA7B774A",
+    "popularity": 0.99495006,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:endorsement:qloo:dior",
+    "name": "Dior",
+    "type": "urn:tag",
+    "subtype": "urn:tag:endorsement:qloo",
+    "entity_id": "4408D1E1-F582-43C1-9410-A705F6309D5F",
+    "popularity": 0.26431775,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:emotional_tone:qloo:confident",
+    "name": "Confident",
+    "type": "urn:tag",
+    "subtype": "urn:tag:emotional_tone:qloo",
+    "entity_id": "469691CA-46FA-4D9C-8ADA-7E7ED8795754",
+    "popularity": 0.933727,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:gender:qloo:female",
+    "name": "Female",
+    "type": "urn:tag",
+    "subtype": "urn:tag:gender:qloo",
+    "entity_id": "D46CD79C-C551-400F-9370-E556F39B8770",
+    "popularity": 0.99026996,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:qloo:comedy",
+    "name": "Comedy",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:qloo",
+    "entity_id": "D46F43B5-48B4-4C64-A339-234D552B6523",
+    "popularity": 0.91359663,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:qloo:drama",
+    "name": "Drama",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:qloo",
+    "entity_id": "D4740907-B283-4D7D-9473-E39F4C48A177",
+    "popularity": 0.9615536,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:ethnicity:qloo:mexican",
+    "name": "Mexican",
+    "type": "urn:tag",
+    "subtype": "urn:tag:ethnicity:qloo",
+    "entity_id": "DEA75AAD-24D5-4591-AB0F-BDAB856F8D93",
+    "popularity": 0.8565106,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:emotional_tone:qloo:optimistic",
+    "name": "Optimistic",
+    "type": "urn:tag",
+    "subtype": "urn:tag:emotional_tone:qloo",
+    "entity_id": "E319841A-1386-4767-A208-B78A8A62D40D",
+    "popularity": 0.48644495,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:characteristic:qloo:resilient",
+    "name": "Resilient",
+    "type": "urn:tag",
+    "subtype": "urn:tag:characteristic:qloo",
+    "entity_id": "E61853A6-92F3-4AE3-B499-0F849469E72C",
+    "popularity": 0.04416659,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:occupation:qloo:actress",
+    "name": "Actress",
+    "type": "urn:tag",
+    "subtype": "urn:tag:occupation:qloo",
+    "entity_id": "F534D505-2CC6-401B-9908-192A6BF33600",
+    "popularity": 0.9839951,
+    "query": {
+     "count": "16"
+    }
+   },
+   {
+    "tag_id": "urn:tag:category:qloo:actors",
+    "name": "Actors",
+    "type": "urn:tag",
+    "subtype": "urn:tag:category:qloo",
+    "entity_id": "FE7392FC-B01D-464D-811C-C3EF1B5F92AF",
+    "popularity": 0.98877925,
+    "query": {
+     "count": "16"
+    }
+   }
+  ],
+  "b": [
+   {
+    "tag_id": "urn:tag:genre:qloo:horror",
+    "name": "Horror",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:qloo",
+    "entity_id": "88490197-8725-4063-99D8-3FD119C62D3B",
+    "popularity": 0.9442775,
+    "query": {
+     "count": "3"
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:media:horror",
+    "name": "Horror",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:media",
+    "entity_id": "C9C2B779-AF5C-426F-9FE2-C350366AF1AF",
+    "popularity": 0.99993527,
+    "query": {
+     "count": "3"
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:media:thriller",
+    "name": "Thriller",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:media",
+    "entity_id": "BF0C4F12-E45D-4440-A93D-94510C0D0EA8",
+    "popularity": 0.9999448,
+    "query": {
+     "count": "3"
+    }
+   },
+   {
+    "tag_id": "urn:tag:theme:qloo:survival",
+    "name": "Survival",
+    "type": "urn:tag",
+    "subtype": "urn:tag:theme:qloo",
+    "entity_id": "7828D838-EB76-4BC6-B36E-67CB43A7EAD8",
+    "popularity": 0.9710063,
+    "query": {
+     "count": "3"
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:media:mystery",
+    "name": "Mystery",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:media",
+    "entity_id": "6B0002EB-51FB-438A-BFD3-7259035FA9F0",
+    "popularity": 0.9999526,
+    "query": {
+     "count": "3"
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:qloo:thriller",
+    "name": "Thriller",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:qloo",
+    "entity_id": "55FB0866-32C4-40BE-9266-ADAEEC9CA3F5",
+    "popularity": 0.9729708,
+    "query": {
+     "count": "3"
+    }
+   },
+   {
+    "tag_id": "urn:tag:character:qloo:complex",
+    "name": "Complex",
+    "type": "urn:tag",
+    "subtype": "urn:tag:character:qloo",
+    "entity_id": "8745C637-E61E-45F3-8A6F-68CA76250F2B",
+    "popularity": 0.9953314,
+    "query": {
+     "count": "2"
+    }
+   },
+   {
+    "tag_id": "urn:tag:character:qloo:morally_ambiguous",
+    "name": "Morally ambiguous",
+    "type": "urn:tag",
+    "subtype": "urn:tag:character:qloo",
+    "entity_id": "306CB952-D67C-49D3-8611-4E0F09A3BB54",
+    "popularity": 0.9752242,
+    "query": {
+     "count": "2"
+    }
+   },
+   {
+    "tag_id": "urn:tag:audience:qloo:horror_enthusiasts",
+    "name": "Horror-enthusiasts",
+    "type": "urn:tag",
+    "subtype": "urn:tag:audience:qloo",
+    "entity_id": "67654C55-4673-4D97-82B8-2DFAA319F319",
+    "popularity": 0.9629865,
+    "query": {
+     "count": "2"
+    }
+   },
+   {
+    "tag_id": "urn:tag:style:qloo:gritty",
+    "name": "Gritty",
+    "type": "urn:tag",
+    "subtype": "urn:tag:style:qloo",
+    "entity_id": "BD4E872B-3092-41F3-A1BF-EB94C0758820",
+    "popularity": 0.9926273,
+    "query": {
+     "count": "2"
+    }
+   },
+   {
+    "tag_id": "urn:tag:plot:qloo:tense",
+    "name": "Tense",
+    "type": "urn:tag",
+    "subtype": "urn:tag:plot:qloo",
+    "entity_id": "4DA3B96D-E96E-4AA7-9897-4F049403371A",
+    "popularity": 0.9899348,
+    "query": {
+     "count": "2"
+    }
+   },
+   {
+    "tag_id": "urn:tag:audience:qloo:thrill_seeking",
+    "name": "Thrill-seeking",
+    "type": "urn:tag",
+    "subtype": "urn:tag:audience:qloo",
+    "entity_id": "1533F4EC-1062-4356-A60A-F9F4CAF1879A",
+    "popularity": 0.9924771,
+    "query": {
+     "count": "2"
+    }
+   }
+  ],
+  "tags": [
+   {
+    "tag_id": "urn:tag:genre:media:comedy",
+    "name": "Comedy",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:media",
+    "entity_id": "149E4D1B-F583-4DA0-BD39-6B83D76CBF2C",
+    "popularity": 0.9999843529500821,
+    "query": {
+     "score": 0.7310554965259337,
+     "a.signal.interests.entities": [
+      {
+       "entity_id": "E303B31F-E9F3-4C48-927F-F7D61728B0E8",
+       "name": "Jenna Ortega",
+       "subtype": "urn:entity:person",
+       "disambiguation": "2002-09-27"
+      }
+     ],
+     "b.signal.interests.entities": [
+      {
+       "entity_id": "9DC73A1B-12BD-431B-A2A5-57F47B977634",
+       "name": "Ready or Not",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2019"
+      }
+     ]
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:media:mystery",
+    "name": "Mystery",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:media",
+    "entity_id": "6B0002EB-51FB-438A-BFD3-7259035FA9F0",
+    "popularity": 0.9999526359570053,
+    "query": {
+     "score": 0.7310492619353699,
+     "a.signal.interests.entities": [
+      {
+       "entity_id": "E303B31F-E9F3-4C48-927F-F7D61728B0E8",
+       "name": "Jenna Ortega",
+       "subtype": "urn:entity:person",
+       "disambiguation": "2002-09-27"
+      }
+     ],
+     "b.signal.interests.entities": [
+      {
+       "entity_id": "9DC73A1B-12BD-431B-A2A5-57F47B977634",
+       "name": "Ready or Not",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2019"
+      },
+      {
+       "entity_id": "E2532FDD-442C-4561-8ED5-B698904EA7DC",
+       "name": "Barbarian",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2022"
+      },
+      {
+       "entity_id": "052B6BB1-EDFA-4C49-A6FE-712DBB296B09",
+       "name": "Get Out",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2017"
+      }
+     ]
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:media:action",
+    "name": "Action",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:media",
+    "entity_id": "0875B339-2847-4F2C-9F9D-463800C95BB8",
+    "popularity": 0.9999420636259797,
+    "query": {
+     "score": 0.7310471876246467,
+     "a.signal.interests.entities": [
+      {
+       "entity_id": "E303B31F-E9F3-4C48-927F-F7D61728B0E8",
+       "name": "Jenna Ortega",
+       "subtype": "urn:entity:person",
+       "disambiguation": "2002-09-27"
+      }
+     ],
+     "b.signal.interests.entities": [
+      {
+       "entity_id": "9DC73A1B-12BD-431B-A2A5-57F47B977634",
+       "name": "Ready or Not",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2019"
+      }
+     ]
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:media:horror",
+    "name": "Horror",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:media",
+    "entity_id": "C9C2B779-AF5C-426F-9FE2-C350366AF1AF",
+    "popularity": 0.9999352973341233,
+    "query": {
+     "score": 0.7310458516225556,
+     "a.signal.interests.entities": [
+      {
+       "entity_id": "E303B31F-E9F3-4C48-927F-F7D61728B0E8",
+       "name": "Jenna Ortega",
+       "subtype": "urn:entity:person",
+       "disambiguation": "2002-09-27"
+      }
+     ],
+     "b.signal.interests.entities": [
+      {
+       "entity_id": "9DC73A1B-12BD-431B-A2A5-57F47B977634",
+       "name": "Ready or Not",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2019"
+      },
+      {
+       "entity_id": "E2532FDD-442C-4561-8ED5-B698904EA7DC",
+       "name": "Barbarian",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2022"
+      },
+      {
+       "entity_id": "052B6BB1-EDFA-4C49-A6FE-712DBB296B09",
+       "name": "Get Out",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2017"
+      }
+     ]
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:qloo:horror",
+    "name": "Horror",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:qloo",
+    "entity_id": "88490197-8725-4063-99D8-3FD119C62D3B",
+    "popularity": 0.9442775261162984,
+    "query": {
+     "score": 0.7199628871843184,
+     "a.signal.interests.entities": [
+      {
+       "entity_id": "E303B31F-E9F3-4C48-927F-F7D61728B0E8",
+       "name": "Jenna Ortega",
+       "subtype": "urn:entity:person",
+       "disambiguation": "2002-09-27"
+      }
+     ],
+     "b.signal.interests.entities": [
+      {
+       "entity_id": "9DC73A1B-12BD-431B-A2A5-57F47B977634",
+       "name": "Ready or Not",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2019"
+      },
+      {
+       "entity_id": "E2532FDD-442C-4561-8ED5-B698904EA7DC",
+       "name": "Barbarian",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2022"
+      },
+      {
+       "entity_id": "052B6BB1-EDFA-4C49-A6FE-712DBB296B09",
+       "name": "Get Out",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2017"
+      }
+     ]
+    }
+   },
+   {
+    "tag_id": "urn:tag:genre:qloo:comedy",
+    "name": "Comedy",
+    "type": "urn:tag",
+    "subtype": "urn:tag:genre:qloo",
+    "entity_id": "D46F43B5-48B4-4C64-A339-234D552B6523",
+    "popularity": 0.9135966534159193,
+    "query": {
+     "score": 0.7137355803326613,
+     "a.signal.interests.entities": [
+      {
+       "entity_id": "E303B31F-E9F3-4C48-927F-F7D61728B0E8",
+       "name": "Jenna Ortega",
+       "subtype": "urn:entity:person",
+       "disambiguation": "2002-09-27"
+      }
+     ],
+     "b.signal.interests.entities": [
+      {
+       "entity_id": "9DC73A1B-12BD-431B-A2A5-57F47B977634",
+       "name": "Ready or Not",
+       "subtype": "urn:entity:movie",
+       "disambiguation": "2019"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

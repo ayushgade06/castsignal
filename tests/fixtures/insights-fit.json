@@ -1,0 +1,434 @@
+{
+ "success": true,
+ "results": {
+  "entities": [
+   {
+    "name": "Jenna Ortega",
+    "entity_id": "E303B31F-E9F3-4C48-927F-F7D61728B0E8",
+    "type": "urn:entity",
+    "subtype": "urn:entity:person",
+    "properties": {
+     "image": {
+      "url": "https://images.qloo.com/i/E303B31F-E9F3-4C48-927F-F7D61728B0E8-420x-auto.jpg"
+     }
+    },
+    "popularity": 0.9861982365923397,
+    "tags": [
+     {
+      "name": "American Actresses Of Puerto Rican Descent",
+      "id": "urn:tag:wikipedia_category:wikidata:american_actresses_puerto_rican_descent"
+     },
+     {
+      "name": "American Actresses Of Mexican Descent",
+      "id": "urn:tag:wikipedia_category:wikidata:american_actresses_mexican_descent"
+     },
+     {
+      "name": "Fantasy",
+      "id": "urn:tag:genre:media:media:fantasy"
+     },
+     {
+      "name": "Person",
+      "id": "urn:tag:category:wikidata:person"
+     },
+     {
+      "name": "Horror",
+      "id": "urn:tag:genre:media:media:horror"
+     },
+     {
+      "name": "Action",
+      "id": "urn:tag:genre:media:media:action"
+     },
+     {
+      "name": "Film Actor",
+      "id": "urn:tag:occupation:person:film_actor"
+     },
+     {
+      "name": "Mystery",
+      "id": "urn:tag:genre:media:media:mystery"
+     }
+    ],
+    "query": {
+     "affinity": 0.8268179384824019,
+     "measurements": {
+      "audience_growth": 0
+     },
+     "explainability": {
+      "signal.interests.entities": [
+       {
+        "entity_id": "9DC73A1B-12BD-431B-A2A5-57F47B977634",
+        "score": 0.3647415820251905
+       },
+       {
+        "entity_id": "E2532FDD-442C-4561-8ED5-B698904EA7DC",
+        "score": 0.3478139439904169
+       },
+       {
+        "entity_id": "052B6BB1-EDFA-4C49-A6FE-712DBB296B09",
+        "score": 0.28744447398439255
+       }
+      ]
+     }
+    },
+    "disambiguation": "2002-09-27",
+    "external": {
+     "instagram_username": [
+      {
+       "id": "jennaortega"
+      }
+     ],
+     "twitter_username": [
+      {
+       "id": "jennaortega"
+      }
+     ],
+     "metacritic_id": [
+      {
+       "id": "person/jenna-ortega"
+      }
+     ],
+     "rotten_tomatoes_id": [
+      {
+       "id": "celebrity/jenna_ortega"
+      }
+     ],
+     "musicbrainz_artist_id": [
+      {
+       "id": "4bb10c06-3463-49c3-9252-13ecdd260692"
+      }
+     ],
+     "library_of_congress_authority_id": [
+      {
+       "id": "no2016126916"
+      }
+     ],
+     "imdb_id": [
+      {
+       "id": "nm4911194"
+      }
+     ]
+    }
+   },
+   {
+    "name": "Florence Pugh",
+    "entity_id": "16B70494-1B07-47E4-A318-D89DA4A50DAE",
+    "type": "urn:entity",
+    "subtype": "urn:entity:person",
+    "properties": {
+     "image": {
+      "url": "https://images.qloo.com/i/16B70494-1B07-47E4-A318-D89DA4A50DAE-420x-auto.jpg"
+     }
+    },
+    "popularity": 0.945265870125352,
+    "tags": [
+     {
+      "name": "Engvarb From June 2021",
+      "id": "urn:tag:wikipedia_category:wikidata:engvarb_from_june_2021"
+     },
+     {
+      "name": "Songwriter",
+      "id": "urn:tag:occupation:person:songwriter"
+     },
+     {
+      "name": "Adventure",
+      "id": "urn:tag:genre:media:media:adventure"
+     },
+     {
+      "name": "Chopard Trophy For Female Revelation Winners",
+      "id": "urn:tag:wikipedia_category:wikidata:chopard_trophy_female_revelation_winners"
+     },
+     {
+      "name": "Biography With Signature",
+      "id": "urn:tag:wikipedia_category:wikidata:biography_signature"
+     },
+     {
+      "name": "News",
+      "id": "urn:tag:genre:media:media:news"
+     },
+     {
+      "name": "Mystery",
+      "id": "urn:tag:genre:media:media:mystery"
+     },
+     {
+      "name": "Outstanding Performance By A Cast In A Motion Picture Screen Actors Guild Award Winners",
+      "id": "urn:tag:wikipedia_category:wikidata:outstanding_performance_a_cast_in_a_motion_picture_screen_actors_guild_award_winners"
+     }
+    ],
+    "query": {
+     "affinity": 0.8253577699383362,
+     "measurements": {
+      "audience_growth": 0
+     },
+     "explainability": {
+      "signal.interests.entities": [
+       {
+        "entity_id": "9DC73A1B-12BD-431B-A2A5-57F47B977634",
+        "score": 0.38129434643158494
+       },
+       {
+        "entity_id": "052B6BB1-EDFA-4C49-A6FE-712DBB296B09",
+        "score": 0.31442662087448825
+       },
+       {
+        "entity_id": "E2532FDD-442C-4561-8ED5-B698904EA7DC",
+        "score": 0.30427903269392687
+       }
+      ]
+     }
+    },
+    "disambiguation": "1996-01-03",
+    "external": {
+     "instagram_username": [
+      {
+       "id": "florencepugh"
+      }
+     ],
+     "twitter_username": [
+      {
+       "id": "Florence_Pugh"
+      }
+     ],
+     "metacritic_id": [
+      {
+       "id": "person/florence-pugh"
+      }
+     ],
+     "rotten_tomatoes_id": [
+      {
+       "id": "celebrity/florence_pugh"
+      }
+     ],
+     "musicbrainz_artist_id": [
+      {
+       "id": "dec39aa0-f9f5-4853-86fa-a5239362a325"
+      }
+     ],
+     "library_of_congress_authority_id": [
+      {
+       "id": "no2017137596"
+      }
+     ],
+     "imdb_id": [
+      {
+       "id": "nm6073955"
+      }
+     ]
+    }
+   },
+   {
+    "name": "Pete Davidson",
+    "entity_id": "AC6BB9CA-BFA5-4E3F-98DB-E921584DE0BB",
+    "type": "urn:entity",
+    "subtype": "urn:entity:person",
+    "properties": {
+     "image": {
+      "url": "https://images.qloo.com/i/AC6BB9CA-BFA5-4E3F-98DB-E921584DE0BB-420x-auto.jpg"
+     }
+    },
+    "popularity": 0.8747730509561757,
+    "tags": [
+     {
+      "name": "American Male Television Actors",
+      "id": "urn:tag:wikipedia_category:wikidata:american_male_television_actors"
+     },
+     {
+      "name": "Actor",
+      "id": "urn:tag:genre:person:actor"
+     },
+     {
+      "name": "Documentary",
+      "id": "urn:tag:genre:media:media:documentary"
+     },
+     {
+      "name": "Male Actors From Staten Island",
+      "id": "urn:tag:wikipedia_category:wikidata:male_actors_from_staten_island"
+     },
+     {
+      "name": "Person",
+      "id": "urn:tag:category:wikidata:person"
+     },
+     {
+      "name": "Comedy",
+      "id": "urn:tag:genre:media:media:comedy"
+     },
+     {
+      "name": "21st-century American Male Actors",
+      "id": "urn:tag:wikipedia_category:wikidata:21st_century_american_male_actors"
+     },
+     {
+      "name": "21st-century American Comedians",
+      "id": "urn:tag:wikipedia_category:wikidata:21st_century_american_comedians"
+     }
+    ],
+    "query": {
+     "affinity": 0.78110986431492,
+     "measurements": {
+      "audience_growth": 0
+     },
+     "explainability": {
+      "signal.interests.entities": [
+       {
+        "entity_id": "9DC73A1B-12BD-431B-A2A5-57F47B977634",
+        "score": 0.35155985707945675
+       },
+       {
+        "entity_id": "052B6BB1-EDFA-4C49-A6FE-712DBB296B09",
+        "score": 0.33854966620373467
+       },
+       {
+        "entity_id": "E2532FDD-442C-4561-8ED5-B698904EA7DC",
+        "score": 0.3098904767168086
+       }
+      ]
+     }
+    },
+    "disambiguation": "1993-11-16",
+    "external": {
+     "rotten_tomatoes_id": [
+      {
+       "id": "celebrity/pete_davidson"
+      }
+     ],
+     "musicbrainz_artist_id": [
+      {
+       "id": "d37a3ce6-788d-4272-9af8-3eb6dd9b11a6"
+      }
+     ],
+     "library_of_congress_authority_id": [
+      {
+       "id": "no2019064980"
+      }
+     ],
+     "imdb_id": [
+      {
+       "id": "nm0203457"
+      }
+     ]
+    }
+   },
+   {
+    "name": "Bad Bunny",
+    "entity_id": "7890B792-2CFD-4840-AC2D-8F1D2405B183",
+    "type": "urn:entity",
+    "subtype": "urn:entity:person",
+    "properties": {
+     "image": {
+      "url": "https://images.qloo.com/i/7890B792-2CFD-4840-AC2D-8F1D2405B183-420x-auto.jpg"
+     }
+    },
+    "popularity": 0.9979397919135473,
+    "tags": [
+     {
+      "name": "Puerto Rican Rappers",
+      "id": "urn:tag:wikipedia_category:wikidata:puerto_rican_rappers"
+     },
+     {
+      "name": "Wwe 24/7 Champions",
+      "id": "urn:tag:wikipedia_category:wikidata:wwe_24_7_champions"
+     },
+     {
+      "name": "Composer",
+      "id": "urn:tag:occupation:person:composer"
+     },
+     {
+      "name": "Puerto Rican Reggaeton Musicians",
+      "id": "urn:tag:wikipedia_category:wikidata:puerto_rican_reggaeton_musicians"
+     },
+     {
+      "name": "Lyricist",
+      "id": "urn:tag:occupation:person:lyricist"
+     },
+     {
+      "name": "Puerto Rican Male Professional Wrestlers",
+      "id": "urn:tag:wikipedia_category:wikidata:puerto_rican_male_professional_wrestlers"
+     },
+     {
+      "name": "Singer",
+      "id": "urn:tag:occupation:person:singer"
+     },
+     {
+      "name": "Puerto Rican Record Producers",
+      "id": "urn:tag:wikipedia_category:wikidata:puerto_rican_record_producers"
+     }
+    ],
+    "query": {
+     "affinity": 0.7232069251242246,
+     "measurements": {
+      "audience_growth": 0
+     },
+     "explainability": {
+      "signal.interests.entities": [
+       {
+        "entity_id": "052B6BB1-EDFA-4C49-A6FE-712DBB296B09",
+        "score": 0.35019807562679794
+       },
+       {
+        "entity_id": "E2532FDD-442C-4561-8ED5-B698904EA7DC",
+        "score": 0.3276785921391108
+       },
+       {
+        "entity_id": "9DC73A1B-12BD-431B-A2A5-57F47B977634",
+        "score": 0.32212333223409123
+       }
+      ]
+     }
+    },
+    "disambiguation": "1994-03-10",
+    "external": {
+     "soundcloud_id": [
+      {
+       "id": "yhlqmdlg"
+      },
+      {
+       "id": "badbunny15"
+      }
+     ],
+     "last_fm_id": [
+      {
+       "id": "Bad+Bunny"
+      }
+     ],
+     "instagram_username": [
+      {
+       "id": "badbunnypr"
+      }
+     ],
+     "twitter_username": [
+      {
+       "id": "sanbenito"
+      }
+     ],
+     "metacritic_id": [
+      {
+       "id": "person/bad-bunny"
+      }
+     ],
+     "musicbrainz_artist_id": [
+      {
+       "id": "89aa5ecb-59ad-46f5-b3eb-2d424e941f19"
+      }
+     ],
+     "library_of_congress_authority_id": [
+      {
+       "id": "no2018088483"
+      }
+     ],
+     "spotify_artist_id": [
+      {
+       "id": "4q3ewBCX7sLwd24euuV69X"
+      }
+     ],
+     "imdb_id": [
+      {
+       "id": "nm9559545"
+      }
+     ],
+     "apple_music_artist_id_u_s_version": [
+      {
+       "id": "1126808565"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest run",
+    "smoke": "tsx --env-file=.env.local scripts/smoke.mts",
+    "agent": "tsx --env-file=.env.local scripts/agent.mts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.3.0",
